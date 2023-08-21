@@ -37,7 +37,7 @@ function App() {
 
   return (
     <>
-      <body className='bg-gray-900 flex flex-col h-screen items-center pt-32'>
+      <body className='bg-gray-900 flex flex-col items-center pt-32'>
           <h1 className='text-6xl bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-purple-600 mb-10'>Movie Land
           </h1>
 
@@ -54,8 +54,13 @@ function App() {
             />
         </div>
         
-        <div className='grid grid-rows-1 sm:grid-rows-2 md:grid-rows-3 lg:grid-rows-4 pt-10'>
-          {/* movie card */}
+        <div className='flex flex-wrap justify-center w-[85%] py-10 gap-14 '>
+          <MovieCard movie1={ movie1 } />
+          <MovieCard movie1={ movie1 } />
+          <MovieCard movie1={ movie1 } />
+          <MovieCard movie1={ movie1 } />
+          <MovieCard movie1={ movie1 } />
+          <MovieCard movie1={ movie1 } />
           <MovieCard movie1={ movie1 } />
         </div>
           
