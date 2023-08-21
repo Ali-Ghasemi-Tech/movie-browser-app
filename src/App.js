@@ -75,9 +75,6 @@ function App() {
           </div>
         }
 
-        
-        
-          
       </body>
       
     </>
