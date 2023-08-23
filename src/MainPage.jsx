@@ -30,13 +30,13 @@ const MainPage = () => {
 
   useEffect(() => {
 
-    searchMovie('batman');
+    searchMovie('ted');
 
   } , []);
 
     return(
         <>
-        <body className='bg-gray-900 flex flex-col items-center pt-32 min-h-screen'>
+        <body className=' bg-indigo-950 flex flex-col items-center pt-32 min-h-screen'>
           <h1 className='text-6xl bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-purple-600 mb-10'>Movie Land
           </h1>
 
