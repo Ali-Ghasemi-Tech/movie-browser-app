@@ -11,9 +11,9 @@ function App() {
       <Routes>
         <Route index element={<MainPage />} />
         <Route  path='/mainPage' element = {<MainPage />} />
-        <Route path='/moviePage' element ={<MoviePage />}> 
-          <Route  path=':imdbID' element = {<MoviePage />}/>
-        </Route>
+        <Route path="/moviePage/:imdbID" element={<MoviePage />} />
+          {/* <Route  path=':imdbID' element = {<MoviePage />}/>
+        </Route> */}
       </Routes> 
       
   
