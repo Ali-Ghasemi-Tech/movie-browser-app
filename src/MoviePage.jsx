@@ -28,7 +28,7 @@ const MoviePage = () => {
     return(
         <>
             <body className="flex justify-center items-center bg-indigo-950 min-h-screen w-screen">
-                <div className="flex justify-between items-center bg-gradient-to-l from-10% to-60% from-[#7428bb] to-slate-500 w-[1600px] h-[720px] rounded-xl pb-6 pt-3 shadow-[16px_16px_34px_0] shadow-indigo-800">
+                <div className="flex justify-between items-center bg-gradient-to-l from-10% to-60% from-[#7428bb] to-cyan-800 w-[1600px] h-[720px] rounded-xl pb-6 pt-3 shadow-[16px_16px_34px_0] shadow-indigo-800">
                     <div className="ml-16 mt-10 h-full">
                         <div className="flex flex-col gap-3 mb-10 w-[1000px] text-indigo-200">
                             <h1 className="text-5xl ">{data.Title}</h1>
