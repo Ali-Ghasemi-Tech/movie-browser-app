@@ -1,5 +1,7 @@
 import React from "react";
 import MovieCard from "./MovieCard";
+import MoviePage from './MoviePage';
+import App from './App';
 import './index.css';
 import SearchIcon from "./search.svg";
 import { useEffect, useState } from 'react';
@@ -7,7 +9,7 @@ import { Link } from "react-router-dom";
 
 
 
-const API_URL = 'http://www.omdbapi.com?apikey=46cefbd4';
+const API_URL = 'https://www.omdbapi.com?apikey=46cefbd4';
 
 const MainPage = () => {
 
@@ -18,7 +20,6 @@ const MainPage = () => {
     const response = await fetch(`${API_URL}&s=${title}`);
 
     const data = await response.json();
-    console.log(data);
 
     setMovies(data.Search);
 
@@ -29,13 +30,13 @@ const MainPage = () => {
 
   useEffect(() => {
 
-    searchMovie('batman');
+    searchMovie('ted');
 
   } , []);
 
     return(
         <>
-        <body className='bg-gray-900 flex flex-col items-center pt-32 min-h-screen'>
+        <body className=' bg-indigo-950 flex flex-col items-center pt-32 min-h-screen'>
           <h1 className='text-6xl bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-purple-600 mb-10'>Movie Land
           </h1>
 
@@ -60,14 +61,21 @@ const MainPage = () => {
           movies?.length > 0 
           ? (
             <div  className='flex flex-wrap justify-center w-[85%] py-10 gap-14 '>
+
+
             {
-              movies.map((movie) => {
-                
-                return (<Link to='/moviePage'>
-                        <MovieCard movie = {movie} /> 
-                        </Link>)
-              })
+            movies.map((movie) => (
+              <Link
+                key={movie.id}
+                to={`/moviePage/${movie.id}`}
+                state = {{ movie : movie }}
+              >
+                <MovieCard movie={movie} /> 
+              </Link>
+            ))
             }
+
+
             </div>
           ) :
           <div className='flex justify-center items-center w-full h-full mt-20 text-2xl text-indigo-300'>

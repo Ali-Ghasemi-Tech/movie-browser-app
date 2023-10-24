@@ -7,13 +7,9 @@ import "./index.css";
 import App from "./App";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/movie-browser-app" element={ <App /> }>
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  </React.StrictMode>,
+  
+    <BrowserRouter basename="movie-browser-app">
+        <App />
+    </BrowserRouter>,
   document.getElementById("root")
 );
