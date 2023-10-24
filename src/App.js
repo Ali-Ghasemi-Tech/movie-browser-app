@@ -4,7 +4,7 @@ import MainPage from './MainPage';
 import { Route , Routes } from 'react-router-dom';
 
 
-const API_URL = 'http://www.omdbapi.com?apikey=46cefbd4';
+const API_URL = 'https://www.omdbapi.com?apikey=46cefbd4';
 
 function App() {
   return (
