@@ -5,7 +5,6 @@ import { useLocation } from "react-router-dom";
 
 const API_URL = 'https://www.omdbapi.com?apikey=46cefbd4';
 
-
 const MoviePage = () => {      
     const location = useLocation();
     const {movie} = location.state;
@@ -62,5 +61,6 @@ const MoviePage = () => {
         
     )
 }
+
 
 export default MoviePage;
